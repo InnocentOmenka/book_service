@@ -3,7 +3,7 @@ services:
   API:
     image: omenka/book_service
     ports:
-      - "8080:8080"
+      - "8087:8087"
     depends_on:
       db:
         condition: service_healthy
