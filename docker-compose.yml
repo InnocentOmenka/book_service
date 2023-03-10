@@ -9,16 +9,16 @@ services:
         condition: service_healthy
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db_book
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=1234
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Decagon@2022
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
   db:
     image: postgres:alpine
     ports:
       - "5432:5432"
     environment:
-      - SPRING_DATASOURCE_USERNAME=admin
-      - SPRING_DATASOURCE_PASSWORD=1234
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Decagon@2022
       - POSTGRES_DB=db_book
       - POSTGRES_HOST_AUTH_METHOD=trust
     healthcheck:
